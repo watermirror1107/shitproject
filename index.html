@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+    <script type="application/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="application/javascript" src="js/echarts.min.js"></script>
+    <link rel="stylesheet" href="css/index.css?v=1">
+</head>
+<body>
+<ul class="menuList">
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem title">
+        万载县智慧市场监管网格化管理平台
+    </li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能</li>
+</ul>
+
+<div class="main">
+<!--    <div class="container">-->
+<!--        <div class="vBox">-->
+<!--            <h6>重点行业日常</h6>-->
+<!--            <div class="chart1"></div>-->
+<!--        </div>-->
+<!--        <div class="vBox"></div>-->
+<!--        <div class="vBox"></div>-->
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <div class="vBox"></div>-->
+<!--        <div class="vBox"></div>-->
+<!--    </div>-->
+<!--    <div class="container"></div>-->
+<!--    <div class="container"></div>-->
+<!--    <div class="container"></div>-->
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        $('html').css('fontSize', (window.innerWidth / 1920) + 'px');
+    })
+    window.onresize = function () {
+        $('html').css('fontSize', (window.innerWidth / 1920) + 'px');
+    }
+    $('.menuList li').click(function () {
+        if ($(this).hasClass('title')) return false;
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
+</body>
+</html>
