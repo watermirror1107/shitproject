@@ -111,6 +111,7 @@ ul {
     color: #ffffff;
     text-align: center;
     line-height: 30rem;
+
 }
 
 .main .container:nth-child(3) {
@@ -135,17 +136,24 @@ ul {
 }
 
 .container .chart {
-    width: 100%;
+    width: calc(100% - 20rem);
     height: calc(100% - 40rem);
-    box-sizing: border-box;
-    padding: 0 10rem;
-    overflow-y: scroll;
+    margin-left: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#chart1, #chart2, #chart3, #chart4, #chart5, #chart6, #chart7, #chart8, #chart9 {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 17px);
+    top: 0;
+    left: 0;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .container #chart3 {
-    width: calc(100% - 20rem);
-    margin: 0 auto;
     background-color: rgba(16, 38, 60, .8);
 }
 
@@ -302,9 +310,7 @@ ul {
     background-color: #1c66a0;
 }
 
-.inforList {
-    overflow-y: scroll;
-}
+
 
 .inforList li {
     padding: 0 3%;
@@ -324,7 +330,7 @@ ul {
 }
 
 .jgry {
-    width: 100%;
+    width: calc(100% + 15px);
     overflow-y: scroll;
     height: calc(100% - 30rem);
 }
@@ -367,7 +373,7 @@ ul {
 }
 
 .xgry {
-    margin-right: 3%;
+    margin-right: 6%;
 }
 
 .xxry, .xgry {
