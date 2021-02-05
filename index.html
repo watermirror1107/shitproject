@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="font-size: 1px;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,40 +8,270 @@
     <title>测试</title>
     <script type="application/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="application/javascript" src="js/echarts.min.js"></script>
-    <link rel="stylesheet" href="css/index.css?v=1">
+    <script type="application/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript"
+            src="//api.map.baidu.com/getscript?v=2.0&ak=kp7E6oshjBrgwegOtNetKruOPdMlHhGn"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css?v=3">
 </head>
 <body>
 <ul class="menuList">
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem title">
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="title">
         万载县智慧市场监管网格化管理平台
     </li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
-    <li class="menuItem">测试功能</li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
+    <li class="menuItem">测试功能 <span></span></li>
 </ul>
-
 <div class="main">
-<!--    <div class="container">-->
-<!--        <div class="vBox">-->
-<!--            <h6>重点行业日常</h6>-->
-<!--            <div class="chart1"></div>-->
-<!--        </div>-->
-<!--        <div class="vBox"></div>-->
-<!--        <div class="vBox"></div>-->
-<!--    </div>-->
-<!--    <div class="container">-->
-<!--        <div class="vBox"></div>-->
-<!--        <div class="vBox"></div>-->
-<!--    </div>-->
-<!--    <div class="container"></div>-->
-<!--    <div class="container"></div>-->
-<!--    <div class="container"></div>-->
+    <div class="container">
+        <div class="vBox">
+            <h6>重点行业日常</h6>
+            <div class="chart" id="chart1"></div>
+        </div>
+        <div class="vBox">
+            <h6>抽样检查</h6>
+            <div class="chart" id="chart2"></div>
+        </div>
+        <div class="vBox">
+            <h6>日常检查合格率统计</h6>
+            <div class="chart" id="chart3">
+                <ul>
+                    <li class="item">
+                        <p>年日常检查</p>
+                        <p>10,100<span>万元</span></p>
+                    </li>
+                    <li class="item">
+                        <p>年累计检查量</p>
+                        <p>10,100<span>万元</span></p>
+                    </li>
+                    <li class="item">
+                        <p>年专项检查</p>
+                        <p>82<span>%</span></p>
+                    </li>
+                </ul>
+                <div class="slideBox">
+                    <p>
+                        <span>日常75%</span>
+                        <span>日常25%</span>
+                    </p>
+                    <div class="showNumber">
+                        <div class="left">
+                            <p>合格</p>
+                            <p>12938</p>
+                        </div>
+                        <div class="left right">
+                            <p>不合格</p>
+                            <p>938</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideBox ">
+                    <p>
+                        <span>专项75%</span>
+                        <span>专项25%</span>
+                    </p>
+                    <div class="showNumber showNumberTwo">
+                        <div class="left">
+                            <p>合格</p>
+                            <p>12938</p>
+                        </div>
+                        <div class="left right">
+                            <p>不合格</p>
+                            <p>1238</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="vBox h2">
+            <h6>全县行业分布情况</h6>
+            <div class="chart" id="chart4"></div>
+        </div>
+        <div class="vBox">
+            <h6>全市企业分布情况</h6>
+            <div class="chart" id="chart5"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="vBox h3">
+            <div id="allmap"></div>
+            <div class="top">
+                <p>
+                    市场主体总量
+                    <!--                    <span class="number">-->
+                    <!--                        1-->
+                    <!--                    </span>-->
+                </p>
+            </div>
+            <div class="left">
+
+            </div>
+            <!--            <div class="right">-->
+            <!--                <p class="type">-->
+            <!--                    <span>业务</span>-->
+            <!--                    <span>视频</span>-->
+            <!--                </p>-->
+            <!--                <ul class="rightList">-->
+            <!--                    -->
+            <!--                </ul>-->
+            <!--            </div>-->
+            <div class="bottom">
+                <ul>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                    <li class="item">
+                        <p><span>234</span>件</p>
+                        <p>当年新增市场主体总量</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="vBox h2">
+            <h6>指挥调度</h6>
+            <div class="chart">
+                <ul class="tabList">
+                    <li class="active">监管人员</li>
+                    <li>专家列表</li>
+                    <li>物资列表</li>
+                    <li>车辆列表</li>
+                </ul>
+                <div class="content jgry">
+                    <div class="litBox">
+                        <input type="text" class="searchInput" placeholder="查询">
+                        <button>查询</button>
+                        <button>监管区</button>
+                    </div>
+                    <ul class="inforList">
+                        <li class="title">测试员</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                    </ul>
+                    <ul class="inforList xgry">
+                        <li class="title">协管人员</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                    </ul>
+                    <ul class="inforList xxry">
+                        <li class="title">信息人员</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                        <li> 测试员 130123012931</li>
+                    </ul>
+                </div>
+                <div class="content">
+
+                </div>
+                <div class="content">
+
+                </div>
+                <div class="content">
+
+                </div>
+            </div>
+        </div>
+        <div class="vBox">
+            <h6>微信投诉举报</h6>
+            <div class="chart" id="chart6">
+                <div class="col1">
+                    <p>
+                        <span>已办理</span>
+                        <br/>
+                        <span class="num">123<e>件</e></span>
+                    </p>
+                    <p>
+                        <span>已办理</span>
+                        <br/>
+                        <span class="num">123<e>件</e></span>
+                    </p>
+                </div>
+                <div class="col2" id="col2"></div>
+                <div class="col3">
+                    <p>本月接受总数: <span>123123</span>件</p>
+                    <p>本月接受总数: <span>123214</span>件</p>
+                    <p>本月接受总数: <span>2314</span>件</p>
+                    <p>本月接受总数: <span>1234</span>件</p>
+                    <div class="total">
+                        <p>分类统计</p>
+                        <p class="row1">12315热点:13123</p>
+                        <p class="row2">微信投诉举报:11231212312</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="vBox">
+            <h6>双随机检查</h6>
+            <div class="chart" id="chart7"></div>
+        </div>
+        <div class="vBox">
+            <h6>重点行业统计</h6>
+            <p class="pTitle"><span>个体</span><span>12309</span><span>51%</span></p>
+            <p class="pTitle"><span>企业</span><span>2903</span><span>49%</span></p>
+            <div class="chart" id="chart8"></div>
+        </div>
+        <div class="vBox">
+            <h6>执法案件统计</h6>
+            <div class="chart" id="chart9"></div>
+        </div>
+    </div>
 </div>
+<div class="videoList"></div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         $('html').css('fontSize', (window.innerWidth / 1920) + 'px');
@@ -53,6 +283,861 @@
         if ($(this).hasClass('title')) return false;
         $(this).addClass('active').siblings().removeClass('active');
     })
+
+    $(function () {
+        //抽样检查
+        var chart2 = echarts.init(document.getElementById('chart2'));
+        var option2 = {
+            textStyle: {
+                color: '#fff'
+            },
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'transparent',
+                textStyle: {
+                    color: '#fff'
+                },
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: 'transparent'
+                    }
+                }
+            },
+            legend: {
+                icon: 'roundRect',
+                textStyle: {
+                    color: '#ffffff'
+                },
+                data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    splitLine: {
+                        show: true
+                    },
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                }
+            ],
+            yAxis: [
+                {
+                    show: true,
+                    splitLine: true,
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '邮件营销',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '联盟广告',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: '视频广告',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: '直接访问',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '搜索引擎',
+                    type: 'line',
+                    stack: '总量',
+
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
+        chart2.setOption(option2);
+        //全县行业分布情况
+        var chart4 = echarts.init(document.getElementById('chart4'));
+        var option4 = {
+            grid: {
+                left: 10,
+                right: 10,
+                bottom: 10,
+                containLabel: true,
+            },
+            textStyle: {
+                color: '#fff'
+            },
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: 'transparent',
+                textStyle: {
+                    color: '#fff'
+                },
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function (params, ticket, callback) {
+                    return params[0].axisValue + '<br />' + String(params[0].value);
+                }
+            },
+            xAxis: {
+                inverse: true,
+                type: 'value',
+                splitLine: {
+                    show: false
+                },
+                show: false
+            },
+            yAxis: {
+                boundaryGap: true,
+                axisLabel: {
+                    align: 'right',
+                    show: true,
+                },
+                axisLine: {show: false},
+                axisTick: {
+                    show: false
+                },
+                type: 'category',
+                data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)', '撒旦法', 'asdfa', '卡了是机', '按点击', '按点击', '按点击', '按点击', '按点击']
+            },
+            series: [
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        borderRadius: 50,
+                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                            offset: 0,
+                            color: '#154575'
+                        }, {
+                            offset: 1,
+                            color: '#247ec1'
+                        }]),
+                    },
+                    data: [18203, 23489, 29034, 104970, 131744, 63020, 63020, 63020, 63020, 132124, 342512, 142322, 122314, 141234]
+                }
+            ]
+        };
+        chart4.setOption(option4);
+        //全市企业发布情况
+        var chart5 = echarts.init(document.getElementById('chart5'));
+        var option5 = {
+            backgroundColor: 'rgba(16,38,60,.8)',
+            legend: {
+                width: '30%',
+                itemWidth: 10,
+                textStyle: {
+                    color: '#ffffff'
+                },
+                top: 'center',
+                left: '70%'
+            },
+            series: [
+                {
+                    width: '70%',
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: ['55', '65%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: true,
+                        // color: function (params) {
+                        //     console.log(params)
+                        //     return '#fff'
+                        // },
+                        formatter: '{c}%',
+                        fontSize: 12,
+                        distanceToLabelLine: -20
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        {value: 10, name: '1'},
+                        {value: 10, name: '2'},
+                        {value: 10, name: '3打法'},
+                        {value: 30, name: '4'},
+                        {value: 10, name: '5'},
+                        {value: 5, name: '邮件营销'},
+                        {value: 20, name: '联盟广告'},
+                        {value: 15, name: '视频广告'}
+                    ]
+                },
+                {
+                    width: '70%',
+                    name: '外边框',
+                    type: 'pie',
+                    hoverAnimation: false, //鼠标移入变大
+                    center: ['50%', '50%'],
+                    radius: ['69%', '69%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [{
+                        value: 9,
+                        name: '',
+                        itemStyle: {
+                            normal: {
+                                borderWidth: 2,
+                                borderColor: '#61bad3',
+                                borderType: 'dashed'
+                            }
+                        }
+                    }]
+                },
+            ]
+        };
+        chart5.setOption(option5);
+        //微信投诉举报
+        var chart6 = echarts.init(document.getElementById('col2'));
+        var option6 = {
+            title: [
+                {
+                    text: '占比:1%',
+                    x: '50%',
+                    y: '40%',
+                    textStyle: {
+                        color: '#25cbf6',
+                        fontSize: 14
+                    },
+                    textAlign: 'center'
+                },
+                {
+                    text: '占比:5%',
+                    x: '50%',
+                    y: '85%',
+                    textStyle: {
+                        color: '#25cbf6',
+                        fontSize: 14
+                    },
+                    textAlign: 'center'
+                },
+            ],
+            series: [
+                {
+                    type: 'pie',
+                    hoverAnimation: false, //鼠标移入变大
+                    center: ['50%', '25%'],
+                    radius: ['66%', '66%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [{
+                        value: 999,
+                        itemStyle: {
+                            normal: {
+                                borderWidth: 2,
+                                borderColor: '#113e5e'
+                            }
+                        }
+                    }]
+                },
+                {
+                    label: {
+                        show: false
+                    },
+                    type: 'pie',
+                    radius: '60%',
+                    center: ['50%', '25%'],
+                    data: [90, 10],
+                },
+                {
+                    type: 'pie',
+                    hoverAnimation: false, //鼠标移入变大
+                    center: ['50%', '70%'],
+                    radius: ['66%', '66%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [{
+                        value: 999,
+                        itemStyle: {
+                            normal: {
+                                borderWidth: 2,
+                                borderColor: '#113e5e'
+                            }
+                        }
+                    }]
+                },
+                {
+                    label: {
+                        show: false
+                    },
+                    type: 'pie',
+                    radius: '60%',
+                    center: ['50%', '70%'],
+                    data: [20, 80]
+                }],
+        };
+        chart6.setOption(option6);
+        //双随机检查
+        var chart7 = echarts.init(document.getElementById('chart7'));
+        var option7 = {
+            title: {
+                text: '2021年测试',
+                left: 'center',
+                textStyle: '#fff'
+            },
+            textStyle: {
+                color: '#fff'
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#3daae6'
+                    }
+                },
+                axisTick: {show: false},
+                axisLabel: {
+                    formatter: function (value, index) {
+                        var arr = value.split(''), res = '';
+                        for (let item of arr) {
+                            res += item + '\n'
+                        }
+                        return res
+                    }
+                }
+            },
+            yAxis: {
+                name: '单位:份',
+                nameLocation: 'end',
+                type: 'value',
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#3daae6'
+                    }
+                }
+            },
+            series: [{
+                label: {
+                    show: true,
+                    position: 'top',
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                itemStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#13548e'
+                    }, {
+                        offset: 1,
+                        color: '#3ca6e3'
+                    }]),
+                },
+                data: [120, 200, 150, 80, 70, 110, 130],
+                type: 'bar'
+            }]
+        };
+        chart7.setOption(option7);
+        //重点行业统计
+        var chart8 = echarts.init(document.getElementById('chart8'));
+        var option8 = {
+            textStyle: {
+                color: '#fff'
+            },
+            aria: {
+                enabled: true,
+            },
+            title: {
+                text: '数据波动\n监控情况',
+                top: 'center',
+                left: 'center',
+                textStyle: {
+                    color: '#fff',
+                    fontWeight: 'normal',
+                    fontSize: 12
+                }
+            },
+            series: [{
+                type: 'pie',
+                radius: ['70%', '100%'],
+                top: 'center',
+                left: 'center',
+                width: '100%',
+                itemStyle: {
+                    decal: {
+                        // symbol: 'circle'
+                    }
+                },
+                label: {
+                    alignTo: 'edge',
+                    formatter: '{b} {name|{c}} \n',
+                    minMargin: 5,
+                    edgeDistance: 10,
+                    lineHeight: 15,
+                    textStyle: {
+                        color: '#fff'
+                    },
+                    rich: {
+                        name: {
+                            color: '#25cbf6'
+                        }
+                    }
+                },
+                labelLine: {
+                    length: 15,
+                    length2: 0,
+                    maxSurfaceAngle: 80
+                },
+                labelLayout: function (params) {
+                    var isLeft = params.labelRect.x < chart8.getWidth() / 2;
+                    var points = params.labelLinePoints;
+                    // Update the end point.
+                    points[2][0] = isLeft
+                        ? params.labelRect.x
+                        : params.labelRect.x + params.labelRect.width;
+
+                    return {
+                        labelLinePoints: points
+                    };
+                },
+                data: [{name: '圣彼得堡', value: 5.6},
+                    {name: '陀思妥耶', value: 1},
+                    {name: '史记精注', value: 0.8},
+                    {name: '加德纳艺', value: 0.5},
+                    {name: '表象本质', value: 0.5},
+                    {name: '其它地方', value: 3.8}]
+            }]
+        };
+        chart8.setOption(option8);
+        //执法案件统计
+        var chart9 = echarts.init(document.getElementById('chart9'));
+        var option9 = {
+            textStyle: {
+                color: '#fff'
+            },
+            tooltip: {
+                backgroundColor: 'transparent',
+                textStyle: {
+                    color: '#fff'
+                },
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                icon: 'roundRect',
+                textStyle: {
+                    color: '#ffffff'
+                },
+                data: ['国控性债务', '政府性债务']
+            },
+            xAxis: {
+                type: 'category',
+                data: ['2013', '2014', '2015', '2016', '2017', '2018', '2019'],
+                axisLine: {
+                    lineStyle: {
+                        color: '#3daae6'
+                    }
+                },
+                axisTick: {show: false},
+            },
+            yAxis: {
+                name: '单位:百分比',
+                nameLocation: 'end',
+                type: 'value',
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#3daae6'
+                    }
+                }
+            },
+            series: [
+                {
+                    itemStyle: {
+                        normal: {
+                            color: '#f32342',
+                            lineStyle: {
+                                color: '#f32342'
+                            }
+                        }
+                    },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#7a141c'
+                        }, {
+                            offset: 1,
+                            color: 'transparent'
+                        }]),
+                    },
+                    name: '国控性债务',
+                    data: [140, 220, 180, 120, 170, 210, 160],
+                    type: 'line'
+                },
+                {
+                    itemStyle: {
+                        normal: {
+                            color: '#35e5ea',
+                            lineStyle: {
+                                color: '#35e5ea'
+                            }
+                        }
+                    },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#35e5ea'
+                        }, {
+                            offset: 1,
+                            color: 'transparent'
+                        }]),
+                    },
+                    name: '政府性债务',
+                    data: [100, 180, 130, 60, 50, 90, 110],
+                    type: 'line'
+                }
+            ]
+        };
+        chart9.setOption(option9);
+        var height = $('.h3').css('height');
+        $('#allmap').css('height', height)
+        //地图
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);
+        //地图样式
+        // 地图样式
+        var styleJson = [
+            {
+                'featureType': 'water',
+                'elementType': 'all',
+                'stylers': {
+                    'color': '#0b2c41ff'
+                }
+            },
+            {
+                'featureType': 'highway',
+                'elementType': 'geometry.fill',
+                'stylers': {
+                    'color': '#000000'
+                }
+            },
+            {
+                'featureType': 'highway',
+                'elementType': 'geometry.stroke',
+                'stylers': {
+                    'color': '#1292e1ff'
+                }
+            },
+            {
+                'featureType': 'arterial',
+                'elementType': 'geometry.fill',
+                'stylers': {
+                    'color': '#000000'
+                }
+            },
+            {
+                'featureType': 'arterial',
+                'elementType': 'geometry.stroke',
+                'stylers': {
+                    'color': '#069135ff'
+                }
+            },
+            {
+                'featureType': 'local',
+                'elementType': 'geometry',
+                'stylers': {
+                    'color': '#000000'
+                }
+            },
+            {
+                'featureType': 'land',
+                'elementType': 'all',
+                'stylers': {
+                    'color': '#04000eff'
+                }
+            },
+            {
+                'featureType': 'railway',
+                'elementType': 'geometry.fill',
+                'stylers': {
+                    'color': '#000000'
+                }
+            },
+            {
+                'featureType': 'railway',
+                'elementType': 'geometry.stroke',
+                'stylers': {
+                    'color': '#08304b'
+                }
+            },
+            {
+                'featureType': 'subway',
+                'elementType': 'geometry',
+                'stylers': {
+                    'lightness': -70
+                }
+            },
+            {
+                'featureType': 'building',
+                'elementType': 'geometry.fill',
+                'stylers': {
+                    'color': '#000000'
+                }
+            },
+            {
+                'featureType': 'all',
+                'elementType': 'labels.text.fill',
+                'stylers': {}
+            },
+            {
+                'featureType': 'all',
+                'elementType': 'labels.text.stroke',
+                'stylers': {
+                    'color': '#00437eff'
+                }
+            },
+            {
+                'featureType': 'building',
+                'elementType': 'geometry',
+                'stylers': {
+                    'color': '#022338'
+                }
+            },
+            {
+                'featureType': 'green',
+                'elementType': 'geometry',
+                'stylers': {
+                    'color': '#062032'
+                }
+            },
+            {
+                'featureType': 'boundary',
+                'elementType': 'all',
+                'stylers': {
+                    'color': '#1e1c1c'
+                }
+            },
+            {
+                'featureType': 'manmade',
+                'elementType': 'geometry',
+                'stylers': {
+                    'color': '#022338'
+                }
+            },
+            {
+                'featureType': 'poi',
+                'elementType': 'all',
+                'stylers': {
+                    'visibility': 'off'
+                }
+            },
+            {
+                'featureType': 'all',
+                'elementType': 'labels.icon',
+                'stylers': {
+                    'visibility': 'off'
+                }
+            },
+            {
+                'featureType': 'all',
+                'elementType': 'labels.text.fill',
+                'stylers': {
+                    'color': '#ffffffff',
+                    'lightness': 13,
+                    'saturation': 41,
+                    'visibility': 'on'
+                }
+            }
+        ];
+        map.setMapStyle({
+            styleJson: styleJson
+        });
+    })
+    //切换类别
+    $('.tabList li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    var num = 1234283
+
+    function refactNum(n) {
+        var arr = String(n).split('');
+        for (var i = 0; i < arr.length; i++) {
+            $(".h3 .top p").append('<span class="number">' + arr[i] + '</span>')
+        }
+    }
+
+    refactNum(num);
+    let option = {
+        color: ['#23649e', '#2e7bad', '#1dc499', '#4da7c1', '#65b5c2', "rgba(250,250,250,0.3)"],
+        grid: {
+            left: 0,
+            // right: 0,
+            bottom: 0,
+            top: 0,
+            containLabel: true
+        },
+        // grid: {
+        //     bottom: 150,
+        //     left: 100,
+        //     right: '10%'
+        // },
+        legend: {
+            orient: 'vertical',
+            top: "middle",
+            right: "12%",
+            textStyle: {
+                color: '#788288',
+                fontSize: 13,
+            },
+            icon: 'roundRect',
+            data: [{"name": "1", "value": 10},
+                {"name": "2", "value": 10},
+                {"name": "3", "value": 10},
+                {"name": "4", "value": 10},
+                {"name": "5", "value": 10},],
+        },
+        series: [
+            // 主要展示层的
+            {
+                radius: ['30%', '61%'],
+                center: ['50%', '50%'],
+                type: 'pie',
+                label: {
+                    normal: {
+                        show: true,
+                        formatter: "{c}%",
+                        textStyle: {
+                            fontSize: 13,
+                        },
+                        position: 'outside'
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        length: 20,
+                        length2: 35
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                name: "民警训练总量",
+                data: [{"name": "1", "value": 10},
+                    {"name": "2", "value": 10},
+                    {"name": "3", "value": 10},
+                    {"name": "4", "value": 10},
+                    {"name": "5", "value": 10},],
+            },
+            // 边框的设置
+            {
+                radius: ['30%', '34%'],
+                center: ['50%', '50%'],
+                type: 'pie',
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                animation: false,
+                tooltip: {
+                    show: false
+                },
+                data: [{
+                    value: 1,
+                    itemStyle: {
+                        color: "rgba(250,250,250,0.3)",
+                    },
+                }],
+            },
+            {
+                name: '外边框',
+                type: 'pie',
+                clockWise: false, //顺时加载
+                hoverAnimation: false, //鼠标移入变大
+                center: ['50%', '50%'],
+                radius: ['65%', '65%'],
+                label: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    value: 9,
+                    name: '',
+                    itemStyle: {
+                        normal: {
+                            borderWidth: 2,
+                            borderColor: '#61bad3'
+                        }
+                    }
+                }]
+            },
+        ]
+    };
 </script>
 </body>
 </html>
