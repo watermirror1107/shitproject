@@ -31,7 +31,7 @@
 <div class="main">
     <div class="container">
         <div class="vBox">
-            <h6>重点行业日常</h6>
+            <h6>重点行业日常检查占比</h6>
             <div class="chart">
                 <div id="chart1"></div>
             </div>
@@ -195,33 +195,101 @@
                         <button>查询</button>
                         <button>监管区</button>
                     </div>
-                    <ul class="inforList">
-                        <li class="title">测试员</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                        <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
-                    </ul>
-                    <ul class="inforList xgry">
-                        <li class="title">协管人员</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                    </ul>
-                    <ul class="inforList xxry">
-                        <li class="title">信息人员</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                        <li> 测试员 130123012931</li>
-                    </ul>
+                    <div class="inforList csry">
+                        <p class="title">测试员</p>
+                        <ul>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+                            <li><img class="icon" src="./img/icon.png" alt=""> 测试员 130123012931</li>
+
+                        </ul>
+                    </div>
+                    <div class="inforList xgry">
+                        <p class="title">协管人员</p>
+                        <ul>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inforList xxry">
+                        <p class="title">信息人员</p>
+                        <ul>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                            <li><img class="icon" src="./img/icon.png" alt="">
+                                <p>
+                                    协管人员
+                                    <br/>
+                                    135093817263</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="content">
 
@@ -304,6 +372,130 @@
     })
 
     $(function () {
+        //重点行业检查占比
+        var chart1 = echarts.init(document.getElementById('chart1'));
+        var option1 = {
+            title: {
+                text: '各类业务占比情况 {fence|}',
+                left: 15,
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 12,
+                    fontWeight: 'normal',
+                    rich: {
+                        fence: {
+                            height: 28,
+                            top: 0,
+                            backgroundColor: {
+                                image: './img/fence.png'
+                            }
+                        }
+                    }
+                }
+            },
+            series: []
+        };
+        var obj = {
+            draw: function (data) {
+                var self = this;
+                if ($.isEmptyObject(data)) {
+                    // data = this.getData();
+                    return;
+                }
+                var sData = data;
+                var centerX = ['35%', '68%', '82%', '20%', '90%', '40%', '10%', '65%'];
+                var centerY = ['42%', '73%', '38%', '80%', '60%', '85%', '65%', '25%'];
+                var num = 0;
+                $.each(sData, function (i, v) {
+                    var x = centerX[i];
+                    var y = centerY[i];
+                    var n = Number(v.value) * 100 / 10;
+                    if (n > 1) {
+                        var r2 = Number(v.value) * 100;
+                        var r1 = 0;
+                        var rbg = 0.3;
+                        for (var b = 0; b <= n; b++) {
+                            if (b == 0) {
+                                if (n >= 5) {
+                                    r2 = 50;
+                                }
+                                self.bubbleChart(num, x, y, r1 * (3 / 4) + '%', r2 * (3 / 4) + '%', 'rgba(20,230,248,' + rbg + ')', v.value, v.name);
+                            } else {
+                                r1 = r2 + 2;
+                                r2 = r1 + 2;
+                                rbg = rbg + 0.2;
+                                self.bubbleChart(num, x, y, r1 * (3 / 4) + '%', r2 * (3 / 4) + '%', 'rgba(20,230,248,' + rbg + ')', v.value, v.name);
+                            }
+                            num++;
+                        }
+                    } else {
+                        var r2 = Number(v.value) * 100;
+                        var r1 = 0;
+                        var rbg = 0.3;
+                        self.bubbleChart(num, x, y, r1 + '%', '7.5%', 'rgba(20,230,248,' + rbg + ')', v.value, v.name);
+                        num++;
+                    }
+                });
+            },
+            bubbleChart: function (id, x, y, r1, r2, rbga, value, name) {
+                option1.series.push({
+                    name: id,
+                    type: 'pie',
+                    center: [x, y],
+                    radius: [r1, r2],
+                    itemStyle: {
+                        color: {
+                            type: 'linear',
+                            x: -1,
+                            y: -1,
+                            x1: 1,
+                            y1: 1,
+                            colorStops: [
+                                {
+                                    offset: 0, color: 'rgba(248, 248, 255, 0)'
+                                },
+                                {
+                                    offset: 1, color: rbga
+                                }],
+                            global: false // 缺省为 false
+                        }
+                    },
+                    label: {
+                        show: true,
+                        position: 'center',
+                        formatter: '{b|{b}}\n{b|{c}%}',
+                        rich: {
+                            b: {
+                                fontFamily: 'Microsoft YaHei',
+                                color: '#fff',
+                                fontSize: 12,
+                                lineHeight: 20,
+                                align: 'center'
+                            }
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: 12
+                            }
+                        }
+                    },
+                    data: [
+                        {value: (Number(value) * 100).toFixed(2), name: name},
+                    ]
+                });
+            }
+        };
+        obj.draw([
+            {name: '测试1', value: 0.30},
+            {name: '测试2', value: 0.20},
+            {name: '测试3', value: 0.10},
+            {name: '测试4', value: 0.10},
+            {name: '测试5', value: 0.20},
+            {name: '测试6', value: 0.05},
+            {name: '测试7', value: 0.05},
+        ])
+        chart1.setOption(option1);
         //抽样检查
         var chart2 = echarts.init(document.getElementById('chart2'));
         var option2 = {
@@ -697,75 +889,224 @@
         chart7.setOption(option7);
         //重点行业统计
         var chart8 = echarts.init(document.getElementById('chart8'));
-        var option8 = {
-            textStyle: {
-                color: '#fff'
-            },
-            aria: {
-                enabled: true,
-            },
-            title: {
-                text: '数据波动\n监控情况',
-                top: 'center',
-                left: 'center',
-                textStyle: {
-                    color: '#fff',
-                    fontWeight: 'normal',
-                    fontSize: 12
+        var outsildeA = [
+            {
+                value: 1,
+                itemStyle: {
+                    color: 'transparent'
                 }
             },
-            series: [{
-                type: 'pie',
-                radius: ['70%', '100%'],
-                top: 'center',
-                left: 'center',
-                width: '100%',
+            {
+                value: 1,
                 itemStyle: {
-                    decal: {
-                        // symbol: 'circle'
-                    }
-                },
-                label: {
-                    alignTo: 'edge',
-                    formatter: '{b} {name|{c}} \n',
-                    minMargin: 5,
-                    edgeDistance: 10,
-                    lineHeight: 15,
-                    textStyle: {
-                        color: '#fff'
-                    },
-                    rich: {
-                        name: {
-                            color: '#25cbf6'
-                        }
-                    }
-                },
-                labelLine: {
-                    length: 15,
-                    length2: 0,
-                    maxSurfaceAngle: 80
-                },
-                labelLayout: function (params) {
-                    var isLeft = params.labelRect.x < chart8.getWidth() / 2;
-                    var points = params.labelLinePoints;
-                    // Update the end point.
-                    points[2][0] = isLeft
-                        ? params.labelRect.x
-                        : params.labelRect.x + params.labelRect.width;
+                    color: '#12cbda'
+                }
+            },
+            {
+                value: 5,
+                itemStyle: {
+                    color: '#2b749f'
+                }
+            },
+            {
+                value: 1,
+                itemStyle: {
+                    color: '#12cbda'
+                }
+            }
+        ];
+        var outsildeB = outsildeA.concat();
+        var outsilde = outsildeA.concat(outsildeB);
 
-                    return {
-                        labelLinePoints: points
-                    };
+        // 数据套环数据
+        var ring = [{
+            value: 1,
+            itemStyle: {
+                color: '#0078c4'
+            }
+        }];
+
+        chart8.setOption({
+            color: ['#f9ff12', '#00ff85', '#10cbff', '#ff005c', '#008bff', '#ff9312', '#ff12ed', '#ff1212', '#cf0aff'],
+            tooltip: {},
+            series: [
+                {
+                    name: 'inside',
+                    type: 'pie',
+                    center: ['50%', '50%'],
+                    radius: ['43%', '45%'],
+                    cursor: 'auto',
+                    silent: true,
+                    labelLine: {
+                        show: false
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    data: [
+                        {
+                            name: '重点行业\n\n统计情况',
+                            value: 1,
+                            label: {
+                                show: true,
+                                position: 'center',
+                                color: '#fff',
+                                fontSize: 12
+                            },
+                            itemStyle: {
+                                color: '#5c861f'
+                            }
+                        }, {
+                            value: 1,
+                            itemStyle: {
+                                color: '#ac750f'
+                            }
+                        }, {
+                            value: 1,
+                            itemStyle: {
+                                color: '#ff0028'
+                            }
+                        }
+                    ]
                 },
-                data: [{name: '圣彼得堡', value: 5.6},
-                    {name: '陀思妥耶', value: 1},
-                    {name: '史记精注', value: 0.8},
-                    {name: '加德纳艺', value: 0.5},
-                    {name: '表象本质', value: 0.5},
-                    {name: '其它地方', value: 3.8}]
-            }]
-        };
-        chart8.setOption(option8);
+                {
+                    name: 'ring',
+                    type: 'pie',
+                    center: ['50%', '50%'],
+                    radius: ['49%', '50%'],
+                    hoverAnimation: false,
+                    cursor: 'auto',
+                    silent: true,
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    data: ring
+                },
+                {
+                    name: 'placehoder',
+                    type: 'gauge',
+                    center: ['50%', '50%'],
+                    radius: '65%',
+                    startAngle: 0,
+                    endAngle: 359.9,
+                    splitNumber: 90,
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        length: 26,
+                        lineStyle: {
+                            width: 2,
+                            color: 'rgb(3, 15, 16)'
+                        }
+                    },
+                    axisLabel: {
+                        show: false
+                    },
+                    pointer: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            opacity: 0
+                        }
+                    },
+                    detail: {
+                        show: false
+                    }
+                },
+                {
+                    name: '重点行业',
+                    type: 'pie',
+                    center: ['50%', '50%'],
+                    radius: ['50%', '65%'],
+                    hoverAnimation: false,
+                    z: 0,
+                    zlevel: 0,
+                    label: {
+                        alignTo: 'edge',
+                        formatter: '{b} {name|{c}} \n',
+                        minMargin: 5,
+                        edgeDistance: 10,
+                        lineHeight: 15,
+                        textStyle: {
+                            color: '#fff'
+                        },
+                        rich: {
+                            name: {
+                                color: '#25cbf6'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        length: 15,
+                        length2: 0,
+                        maxSurfaceAngle: 80
+                    },
+                    labelLayout: function (params) {
+                        var isLeft = params.labelRect.x < chart8.getWidth() / 2;
+                        var points = params.labelLinePoints;
+                        // Update the end point.
+                        points[2][0] = isLeft
+                            ? params.labelRect.x
+                            : params.labelRect.x + params.labelRect.width;
+
+                        return {
+                            labelLinePoints: points
+                        };
+                    },
+                    data: [
+                        {name: 'a功能', value: 2},
+                        {name: 'b功能', value: 2},
+                        {name: 'c功能', value: 2},
+                        {name: 'd功能', value: 2},
+                        {name: 'e功能', value: 2},
+                    ]
+                },
+                {
+                    name: 'ring',
+                    type: 'pie',
+                    center: ['50%', '50%'],
+                    radius: ['65%', '66%'],
+                    hoverAnimation: false,
+                    cursor: 'auto',
+                    silent: true,
+                    label: {
+                        show: false,
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    data: ring
+                },
+                {
+                    name: 'outside',
+                    type: 'pie',
+                    center: ['50%', '50%'],
+                    radius: ['69%', '71%'],
+                    hoverAnimation: false,
+                    startAngle: 190,
+                    cursor: 'auto',
+                    silent: true,
+                    labelLine: {
+                        show: false
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    data: outsilde
+                }
+            ]
+        });
         //执法案件统计
         var chart9 = echarts.init(document.getElementById('chart9'));
         var option9 = {

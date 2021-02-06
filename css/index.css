@@ -146,11 +146,11 @@ ul {
 #chart1, #chart2, #chart3, #chart4, #chart5, #chart6, #chart7, #chart8, #chart9 {
     position: absolute;
     height: 100%;
-    width: calc(100% + 17px);
+    width: 100%;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .container #chart3 {
@@ -310,18 +310,44 @@ ul {
     background-color: #1c66a0;
 }
 
+.inforList {
 
+    border: 1rem solid #25cbf6;
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+.inforList .title {
+    line-height: 36rem;
+    padding: 0 3%;
+    width: 94%;
+    text-align: left;
+}
+
+.inforList ul {
+    width: 100%;
+    height: calc(100% - 36rem);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.inforList ul::-webkit-scrollbar {
+    width: 0 !important
+}
 
 .inforList li {
     padding: 0 3%;
-    line-height: 36rem;
-    height: 36rem;
+    line-height: 40rem;
+    height: 40rem;
 }
 
 .inforList .icon {
     height: 27rem;
-    margin-right: 10rem;
-    margin-top: 1.5rem;
+    width: 16rem;
+    margin-top: 2.5rem;
     float: left;
 }
 
@@ -330,8 +356,8 @@ ul {
 }
 
 .jgry {
-    width: calc(100% + 15px);
-    overflow-y: scroll;
+    width: 100%;
+    overflow: hidden;
     height: calc(100% - 30rem);
 }
 
@@ -372,16 +398,38 @@ ul {
     color: #fff;
 }
 
+.csry {
+    height: 40%;
+}
+
+.csry .icon {
+    margin-right: 10rem;
+}
+
 .xgry {
     margin-right: 6%;
 }
 
 .xxry, .xgry {
     margin-top: 10rem;
+    height: calc(60% - 65rem);
     width: 47%;
     float: left;
 }
 
+.xxry li, .xgry li {
+    line-height: 30rem;
+    height: 60rem;
+}
+
+.xxry li p, .xgry li p {
+    float: left;
+    width: calc(100% - 28rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 10rem;
+}
 
 .h3 > div {
     position: absolute;
