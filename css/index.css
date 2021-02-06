@@ -172,7 +172,7 @@ ul {
 #chart3 .item {
     width: 30%;
     background-color: #114c88;
-    font-size: 12rem;
+    font-size: 1 wrem;
     text-align: center;
     color: #fff;
     float: left;
@@ -283,7 +283,7 @@ ul {
 }
 
 .container li {
-    font-size: 16rem;
+    font-size: 14rem;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -302,7 +302,7 @@ ul {
 .tabList li {
     cursor: pointer;
     text-align: center;
-    font-size: 13rem;
+    font-size: 14rem;
     line-height: 30rem;
 }
 
@@ -311,7 +311,7 @@ ul {
 }
 
 .inforList {
-
+    font-size: 14rem;
     border: 1rem solid #25cbf6;
     border-collapse: collapse;
 
@@ -534,6 +534,35 @@ ul {
     font-weight: bold;
 }
 
+.h3 .left {
+    width: 30%;
+    height: 60%;
+    top: 15%;
+    left: 2%;
+    overflow: hidden;
+    font-size: 14rem;
+    background-color: rgba(1, 41, 79, 0.6);
+}
+
+.h3 .left .status {
+    font-size: 16rem;
+}
+
+.h3 .left .normal {
+    color: #178fad;
+}
+
+.h3 .left .error {
+    color: #8d2338;
+}
+
+.h3 .left .free {
+    color: #72d8a8;
+}
+
+.h3 .swiper-slide {
+    height: 30%;
+}
 
 #chart6 > div {
     float: left;
@@ -546,7 +575,7 @@ ul {
     color: #fff;
     flex-direction: column;
     justify-content: center;
-    font-size: 12rem;
+    font-size: 14rem;
 }
 
 #chart6 .col1 .num {
@@ -573,7 +602,7 @@ ul {
 
 #chart6 .col3 p {
     line-height: 20rem;
-    font-size: 10rem;
+    font-size: 14rem;
     margin-bottom: 5rem;
 }
 
